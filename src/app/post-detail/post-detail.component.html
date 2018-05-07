@@ -1,8 +1,8 @@
 <div>
-  <h3>{{postToDisplay.title}}</h3>
-  <img src="{{postToDisplay.imageLink}}" alt="{{postToDisplay.title}}">
-  <p>{{postToDisplay.description}}</p>
-  <p>{{postToDisplay.condition}}</p>
-  <p>{{postToDisplay.location}}</p>
-  <p>{{postToDisplay.category}}</p>
+  <h3>{{(postToDisplay | async)?.title}}</h3>
+  <img src="{{(postToDisplay | async)?.imageLink}}" alt="{{(postToDisplay | async)?.title}}">
+  <p>{{(postToDisplay | async)?.description}}</p>
+  <p>{{(postToDisplay | async)?.condition}}</p>
+  <p>{{(postToDisplay | async)?.location}}</p>
+  <p>{{(postToDisplay | async)?.category}}</p>
 </div>

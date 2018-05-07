@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-post-detail',
@@ -11,15 +12,14 @@ import { PostService } from '../post.service';
   providers: [PostService]
 })
 export class PostDetailComponent implements OnInit {
-  postID: number = null;
-  postToDisplay: Post;
+  postID: string;
+  postToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private postService: PostService) { }
 
-
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.postID = parseInt(urlParameters['id']);
+      this.postID = urlParameters['id'];
     });
     this.postToDisplay = this.postService.getPostById(this.postID);
   }

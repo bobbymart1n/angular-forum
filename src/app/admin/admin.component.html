@@ -1,0 +1,39 @@
+<h3>Add New Post</h3>
+<div>
+  <div>
+    <label>Post Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Image url:</label>
+    <br>
+    <input #newImageLink>
+  </div>
+
+  <div>
+    <label>Post Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+
+  <div>
+    <label>Post Condition:</label>
+    <br>
+    <textarea #newCondition></textarea>
+  </div>
+
+  <div>
+    <label>Post Location:</label>
+    <br>
+    <textarea #newLocation></textarea>
+  </div>
+
+  <div>
+    <label>Post category:</label>
+    <br>
+    <textarea #newCategory></textarea>
+  </div>
+  <button (click)="submitForm(newTitle.value, newImageLink.value, newDescription.value, newCondition.value, newLocation.value, newCategory.value); newTitle.value=''; newImageLink.value=''; newDescription.value=''; newCondition.value=''; newLocation.value=''; newCategory.value='';">Add</button>
+</div>

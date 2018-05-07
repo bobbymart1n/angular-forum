@@ -1,4 +1,4 @@
-<div *ngFor="let post of postList" (click)="goToDetailPage(post)">
+<div *ngFor="let post of postList | async" (click)="goToDetailPage(post)">
   <h3>{{post.title}}</h3>
   <img src="{{post.imageLink}}" alt="{{post.title}}">
 </div>

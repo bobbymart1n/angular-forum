@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -12,14 +13,14 @@ import { PostService } from '../post.service';
 })
 export class MarketplaceComponent implements OnInit {
   constructor(private router: Router, private postService: PostService) {}
-  postList: Post[];
+  postList: FirebaseListObservable<any[]>;
 
   ngOnInit() {
     this.postList = this.postService.getPosts();
   }
 
   goToDetailPage(clickedPost: Post) {
-    this.router.navigate(['posts', clickedPost.id]);
+    this.router.navigate(['posts', clickedPost.$key]);
   };
 
 }
