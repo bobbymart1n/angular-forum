@@ -1,5 +1,5 @@
 <div class="post-container">
-  <div *ngFor="let post of postList | async" (click)="goToDetailPage(post)" class="post-item">
+  <div *ngFor="let post of postList | async" (click)="goToDetailPage(post)" class="col post-item">
     <img src="{{post.imageLink}}" alt="{{post.title}}">
     <h3 class="text-center">{{post.title}}</h3>
   </div>

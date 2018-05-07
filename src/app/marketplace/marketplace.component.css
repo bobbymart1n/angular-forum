@@ -3,7 +3,6 @@
   flex-flow: row wrap;
 }
 .post-item {
-  width: 350px;
   min-height: 400px;
   padding: 20px;
   background: #eee;

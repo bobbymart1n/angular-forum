@@ -1,1 +1,11 @@
-<h2>Welcome!</h2>
+<ul>
+  <a routerLink="marketplace">
+    <li (click)="categorySearch('antiques')">antiques</li>
+    <li (click)="categorySearch('bicycles')">bicycles</li>
+    <li (click)="categorySearch('business')">business</li>
+    <li (click)="categorySearch('general')">general</li>
+    <li (click)="categorySearch('jewelry')">jewelry</li>
+    <li (click)="categorySearch('sporting goods')">sporting goods</li>
+    <li (click)="categorySearch('tools')">tools</li>
+  </a>
+</ul>

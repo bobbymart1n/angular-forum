@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Post } from './post.model';
 
 @Component({
@@ -8,9 +8,5 @@ import { Post } from './post.model';
 })
 export class AppComponent {
   title = 'Craigslist';
-  selectedCategory: string = "";
-
-  categorySearch(categorySearched: string) {
-    this.selectedCategory = categorySearched;
-  }
+  
 }
