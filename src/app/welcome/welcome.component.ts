@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component} from '@angular/core';
 import { Post } from './../post.model';
 
 @Component({
@@ -7,9 +7,5 @@ import { Post } from './../post.model';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent {
-  @Output() clickedCategory = new EventEmitter();
-  constructor() { }
-  categorySearch(categorySearched: Post) {
-    this.clickedCategory.emit(categorySearched);
-  }
+
 }

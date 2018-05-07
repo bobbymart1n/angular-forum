@@ -10,4 +10,12 @@ export class PostService {
   getPosts() {
     return POSTS;
   }
+
+  getPostById(postID: number){
+    for (let i = 0; i <= POSTS.length -1; i++) {
+      if (POSTS[i].id ===postID) {
+        return POSTS[i];
+      }
+    }
+  }
 }

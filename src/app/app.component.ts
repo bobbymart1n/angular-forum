@@ -8,5 +8,9 @@ import { Post } from './post.model';
 })
 export class AppComponent {
   title = 'Craigslist';
+  selectedCategory: string = "";
 
+  categorySearch(categorySearched: string) {
+    this.selectedCategory = categorySearched;
+  }
 }

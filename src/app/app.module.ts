@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CategoryPipe } from './category.pipe';
 import { routing } from './app.routing';
-import { MarketplaceComponent } from './marketplace/marketplace.component'
+import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { PostDetailComponent } from './post-detail/post-detail.component'
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MarketplaceComponent } from './marketplace/marketplace.component'
     AppComponent,
     WelcomeComponent,
     MarketplaceComponent,
-    CategoryPipe
+    CategoryPipe,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component'
 import { MarketplaceComponent } from './marketplace/marketplace.component'
+import { PostDetailComponent } from './post-detail/post-detail.component'
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const appRoutes: Routes = [
   {
     path: 'marketplace',
     component: MarketplaceComponent
+  },
+  {
+    path: 'posts/:id',
+    component: PostDetailComponent
   }
 ];
 
