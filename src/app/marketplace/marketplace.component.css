@@ -1,0 +1,16 @@
+.post-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.post-item {
+  width: 350px;
+  min-height: 400px;
+  padding: 20px;
+  background: #eee;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.post-item img {
+  width: 100%;
+}
